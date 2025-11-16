@@ -28,7 +28,7 @@ test('Input Form Submit', async({page})=>{
     await page.getByPlaceholder('Address 2').fill('Address-two')
     await page.getByPlaceholder('State').fill('Telengana')
     await page.getByPlaceholder('Zip code').fill('523880')
-     await page.getByRole('button', { name: 'Submit' }).click()
+    await page.getByRole('button', { name: 'Submit' }).click()
 
 
     const Message = await page.getByText('Thanks for contacting us, we will get back to you shortly')
