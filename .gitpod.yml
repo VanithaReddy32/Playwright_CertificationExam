@@ -1,0 +1,11 @@
+ports:
+  - port: 9323
+    onOpen: open-preview
+
+tasks:
+  - name: Run Playwright Tests
+    init: |
+      npm install
+      echo "Running Playwright tests..."
+    command: |
+      npx playwright test --config=lambdatest.config.js
